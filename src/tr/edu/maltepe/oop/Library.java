@@ -17,35 +17,18 @@ public class Library{
 
     public void addBook(Book new_book) {books.add(new_book);}
 
-    public void lend_book(Book book_to_lend,Student student)
+    public void lend_book(Book book_to_lend,Person person)
     {
         flag = books.indexOf(book_to_lend);
 
         if(flag!=-1) {
-            student.addBook(book_to_lend);
+            person.addBook(book_to_lend);
             books.remove(book_to_lend);
-            System.out.println(book_to_lend.getName()+" is lent to "+student.getName());
+            System.out.println(book_to_lend.getName()+" is lent to "+person.getName());
         }
         else{
             System.out.println(book_to_lend.getName()+" is not available.");
         }
     }
-
-    public void lend_book(Book book_to_lend,Professor professor)
-    {
-        flag = books.indexOf(book_to_lend);
-
-        if(flag!=-1) {
-            professor.addBook(book_to_lend);
-            books.remove(book_to_lend);
-            System.out.println(book_to_lend.getName()+" is lent to "+professor.getName());
-        }
-        else{
-            System.out.println(book_to_lend.getName()+" is not available.");
-        }
-    }
-
     public String getName() {return this.name;}
-
-
 }
