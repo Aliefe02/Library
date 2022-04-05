@@ -39,6 +39,7 @@ public class Main {
          */
 
         gym.goToSportsCenter(student);
+        student.play_football(gym);
         gym.goToSportsCenter(student);
         gym.leaveSportsCenter(student);
         gym.leaveSportsCenter(student);

@@ -13,10 +13,7 @@ public class Professor extends Person implements do_sports{
     }
 
     @Override
-    public void work()
-    {
-        System.out.println(this.getName()+" works at university.");
-    }
+    public void work() {System.out.println(this.getName()+" works at university.");}
 
     @Override
     public void swim(Sports_Center gym) {
