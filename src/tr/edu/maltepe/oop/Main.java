@@ -18,10 +18,9 @@ public class Main {
 
         Student student = new Student("Ali");
 
-        Parents parent = new Parents("Altan",student);
-
         Sports_Center gym = new Sports_Center();
 
+        /*
         maltepelibrary.lend_book(java,student);
         maltepelibrary.lend_book(java,student);
         maltepelibrary.lend_book(c,professor);
@@ -37,6 +36,8 @@ public class Main {
         student.return_book(maltepelibrary,python);
         student.return_book(maltepelibrary,python);
 
+         */
+
         gym.goToSportsCenter(student);
         gym.goToSportsCenter(student);
         gym.leaveSportsCenter(student);
@@ -44,11 +45,13 @@ public class Main {
         student.play_football(gym);
         gym.goToSportsCenter(professor);
         professor.swim(gym);
+        professor.play_tennis(gym);
+        student.play_tennis(gym);
 
-        parent.run();
-        parent.swim(gym);
-        gym.goToSportsCenter(parent);
-        parent.play_football(gym);
+        student.eat();
+        professor.eat();
 
+        professor.work();
+        student.work();
     }
 }

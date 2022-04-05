@@ -2,9 +2,11 @@ package tr.edu.maltepe.oop;
 
 import java.util.Vector;
 
-public class Person implements do_sports{
+public abstract class Person{
 
     private String name;
+
+    public abstract void eat();
 
     public void setName(String name){this.name = name;}
     public String getName(){return this.name;}
@@ -30,27 +32,8 @@ public class Person implements do_sports{
         }
     }
 
-    @Override
-    public void swim(Sports_Center gym) {
-        if(gym.isHere(this)) {
-            System.out.println(this.name+" swims at the Sports Center");
-            return;
-        }
-        System.out.println(this.name+" cannot swim because he/she is not at the Sports Center.");
+    public void work(){
+        System.out.println(this.name+" works.");
     }
 
-    @Override
-    public void run() {
-
-    }
-
-    @Override
-    public void play_football(Sports_Center gym) {
-        if(gym.isHere(this)) {
-            System.out.println(this.name+" plays football at the Sports Center");
-            return;
-        }
-        System.out.println(this.name+" cannot play football because he/she is not at the Sports Center.");
-
-    }
 }
